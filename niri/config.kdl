@@ -81,7 +81,7 @@ layout {
     }
 }
 
-spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "noctalia"
 
 cursor {
     xcursor-theme "catppuccin-macchiato-dark-cursors"
