@@ -1,5 +1,3 @@
-// https://niri-wm.github.io/niri/Configuration:-Introduction
-// https://niri-wm.github.io/niri/Configuration:-Input
 input {
     trackball {
         natural-scroll
@@ -14,7 +12,6 @@ input {
     focus-follows-mouse max-scroll-amount="90%"
 }
 
-// https://niri-wm.github.io/niri/Configuration:-Outputs
 output "DP-1" {
     mode "2560x1440"
     transform "180"
@@ -46,7 +43,6 @@ output "DP-2" {
     }
 }
 
-// https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     gaps 8
 
@@ -109,7 +105,6 @@ prefer-no-csd
 
 screenshot-path "~/pictures/screenshots/screenshot-%Y-%m-%d %H-%M-%S.png"
 
-// https://niri-wm.github.io/niri/Configuration:-Window-Rules
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
