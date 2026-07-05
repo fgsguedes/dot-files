@@ -119,11 +119,21 @@ window-rule {
 }
 
 window-rule {
-    match app-id="org.gnome.NautilusPreviewer"
-    match app-id="app.zen_browser.zen" title="Picture-in-Picture"
+    match app-id="org.gnome.Nautilus"
     match app-id="org.pulseaudio.pavucontrol"
+    match app-id="app.zen_browser.zen" title="Picture-in-Picture"
 
     open-floating true
+    default-window-height { proportion 0.6; }
+    default-column-width { proportion 0.5; }
+}
+
+window-rule {
+    match app-id="org.gnome.NautilusPreviewer"
+
+    open-floating true
+    default-window-height { proportion 1.0; }
+    default-column-width { proportion 0.75; }
 }
 
 window-rule {
@@ -134,10 +144,9 @@ window-rule {
 }
 
 window-rule {
-    match app-id="lxqt-policykit-agent"
+    match app-id="dev.noctalia.Noctalia.Settings"
 
-    open-focused true
-    open-floating true
+    default-column-width { proportion 0.5; }
 }
 
 layer-rule {
