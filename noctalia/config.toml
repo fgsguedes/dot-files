@@ -1,0 +1,179 @@
+[bar.default]
+start = [ "power_profile", "cpu", "temp", "ram", "sysmon", "disk_loose" ]
+center = [ "workspaces" ]
+end = [ "media", "spacer_1", "tray", "notifications", "bluetooth", "volume", "input_volume", "spacer_2", "clock" ]
+margin_edge = 0
+margin_ends = 0
+radius = 0
+scale = 1.1
+shadow = false
+widget_spacing = 8
+
+[battery.device."/org/freedesktop/UPower/devices/battery_hidpp_battery_0"]
+warning_threshold = 15
+
+[control_center]
+hidden_tabs = [ "monitor", "network", "screen-time" ]
+
+[control_center.calendar]
+show_events_card = false
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[desktop_widgets]
+enabled = false
+
+[lockscreen]
+blur_intensity = 0.0
+fingerprint = false
+monitors = [ "DP-2" ]
+tint_intensity = 0.0
+
+[lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+box_height = 64.0
+box_width = 400.0
+cx = 1280.0
+cy = 1312.0
+output = "DP-2"
+rotation = 0.0
+type = "login_box"
+
+[lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+background_color = "surface_variant"
+background_opacity = 0.88
+background_radius = 12.0
+input_opacity = 1.0
+input_radius = 8.0
+show_caps_lock = false
+show_keyboard_layout = false
+show_login_button = false
+show_password_hint = false
+
+[nightlight]
+enabled = true
+
+[osd]
+offset_y = 200
+position = "bottom_center"
+
+[osd.kinds]
+keyboard_layout = false
+media = false
+privacy = false
+
+[shell]
+clipboard_confirm_clear_history = false
+corner_radius_scale = 0.4
+date_format = "%A, %d %B %Y"
+polkit_agent = true
+show_location = false
+time_format = "{:%R}"
+ui_scale = 1.1
+
+[shell.animation]
+speed = 2.0
+
+[shell.panel]
+open_near_click_control_center = true
+session_placement = "floating"
+session_position = "center"
+
+[[shell.session.actions]]
+action = "lock"
+countdown_seconds = 0.0
+enabled = true
+shortcut = "1"
+variant = "default"
+
+[[shell.session.actions]]
+action = "logout"
+countdown_seconds = 0.0
+enabled = true
+shortcut = "2"
+variant = "default"
+
+[[shell.session.actions]]
+action = "reboot"
+countdown_seconds = 0.0
+enabled = true
+shortcut = "3"
+variant = "default"
+
+[[shell.session.actions]]
+action = "shutdown"
+countdown_seconds = 0.0
+enabled = true
+shortcut = "4"
+variant = "destructive"
+
+[[shell.session.actions]]
+action = "lock_and_suspend"
+countdown_seconds = 0.0
+enabled = false
+shortcut = "3"
+variant = "default"
+
+[system.monitor]
+cpu_poll_seconds = 5
+disk_poll_seconds = 120
+memory_poll_seconds = 5
+
+[theme]
+builtin = "Nord"
+mode = "light"
+wallpaper_scheme = "m3-content"
+
+[theme.templates]
+enable_builtin_templates = false
+enable_community_templates = false
+
+[widget.clock]
+format = "{:%a %d %b %R}"
+
+[widget.cpu]
+display = "text"
+
+[widget.disk_loose]
+display = "text"
+path = "/mnt/loose"
+stat = "disk_pct"
+type = "sysmon"
+
+[widget.input_volume]
+show_label = false
+
+[widget.media]
+hide_album_art = true
+hide_when_no_media = true
+
+[widget.ram]
+display = "text"
+
+[widget.spacer_1]
+type = "spacer"
+
+[widget.spacer_2]
+type = "spacer"
+
+[widget.sysmon]
+display = "text"
+enabled = true
+stat = "disk_pct"
+
+[widget.temp]
+display = "text"
+
+[widget.volume]
+show_label = false
+
+[widget.weather]
+show_condition = false
+
+[widget.workspaces]
+hide_when_empty = true
+labels_only_when_occupied = true
+minimal = true
