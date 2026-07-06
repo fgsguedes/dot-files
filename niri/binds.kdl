@@ -77,6 +77,20 @@ binds {
     // Noctalia
     Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
     Mod+P repeat=false { spawn-sh "noctalia msg panel-toggle session"; }
+
+    // Noctalia panels
+    Mod+Alt+A { spawn-sh "noctalia msg panel-toggle control-center audio"; }
+    Mod+Mod5+A { spawn-sh "noctalia msg panel-toggle control-center audio"; }
+    Mod+Alt+C { spawn-sh "noctalia msg panel-toggle control-center calendar"; }
+    Mod+Mod5+C { spawn-sh "noctalia msg panel-toggle control-center calendar"; }
+    Mod+Alt+M { spawn-sh "noctalia msg panel-toggle control-center media"; }
+    Mod+Mod5+M { spawn-sh "noctalia msg panel-toggle control-center media"; }
     Mod+Alt+N { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
+    Mod+Mod5+N { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
+    Mod+Alt+P { spawn-sh "noctalia msg panel-toggle control-center power"; }
+    Mod+Mod5+P { spawn-sh "noctalia msg panel-toggle control-center power"; }
+    Mod+Alt+W { spawn-sh "noctalia msg panel-toggle control-center weather"; }
+    Mod+Mod5+W { spawn-sh "noctalia msg panel-toggle control-center weather"; }
     Mod+Alt+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+Mod5+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
 }
