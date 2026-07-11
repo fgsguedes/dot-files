@@ -39,7 +39,13 @@ setopt HIST_IGNORE_ALL_DUPS HIST_REDUCE_BLANKS SHARE_HISTORY
 
 export WORDCHARS=''
 
-export PROMPT=$'%F{blue}%~%f${vcs_info_msg_0_}\n%F{%(?.green.red)}%(!.#.$)%f '
+if [[ -n "$SSH_CONNECTION" ]]; then
+    SSH_PROMPT_INFO="%F{yellow}%n@%m%f:"
+else
+    SSH_PROMPT_INFO=""
+fi
+
+export PROMPT=$'${SSH_PROMPT_INFO}%F{blue}%~%f${vcs_info_msg_0_}\n%F{%(?.green.red)}%(!.#.$)%f '
 
 export PATH="$HOME/.local/bin:$PATH"
 
