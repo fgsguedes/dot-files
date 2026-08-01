@@ -1,7 +1,8 @@
 input {
     trackball {
         natural-scroll
-        accel-speed 1
+        accel-speed 0.9
+        accel-profile "flat"
     }
 
     touchpad {
