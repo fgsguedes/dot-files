@@ -15,7 +15,7 @@ warning_threshold = 15
 [control_center]
 hidden_tabs = [ "monitor", "network", "screen-time" ]
 
-[control_center.calendar]
+[controlcenter.calendar]
 show_events_card = false
 
 [[control_center.shortcuts]]
@@ -27,20 +27,17 @@ type = "power_profile"
 [desktop_widgets]
 enabled = false
 
+[dock]
+reserve_space = false
+
 [lockscreen]
 blur_intensity = 0.0
 fingerprint = false
 monitors = [ "DP-2" ]
 tint_intensity = 0.0
 
-[lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
-box_height = 64.0
-box_width = 400.0
-cx = 1280.0
-cy = 1312.0
-output = "DP-2"
-rotation = 0.0
-type = "login_box"
+[lockscreen_widgets]
+enabled = false
 
 [nightlight]
 enabled = true
@@ -59,6 +56,7 @@ clipboard_confirm_clear_history = false
 corner_radius_scale = 0.4
 date_format = "%A, %d %B %Y"
 polkit_agent = true
+settings_show_advanced = true
 show_location = false
 time_format = "{:%R}"
 
@@ -112,24 +110,30 @@ memory_poll_seconds = 5
 
 [theme]
 builtin = "Nord"
+community_palette = "Catppuccin Lavender"
 mode = "light"
+source = "builtin"
 wallpaper_scheme = "m3-content"
 
 [theme.templates]
 enable_builtin_templates = false
 enable_community_templates = false
 
-[widget.clock]
-format = "{:%a %d %b %R}"
-
 [widget.cpu]
-display = "text"
+visualization = "none"
 
 [widget.disk_loose]
-display = "text"
 path = "/mnt/loose"
-stat = "disk_pct"
+show_value = true
+stat = "disk_used_pct"
 type = "sysmon"
+visualization = "none"
+
+[widget.gpu_usage]
+show_value = true
+stat = "gpu_temp"
+type = "sysmon"
+visualization = "none"
 
 [widget.input_volume]
 show_label = false
@@ -139,7 +143,7 @@ hide_album_art = true
 hide_when_no_media = true
 
 [widget.ram]
-display = "text"
+visualization = "none"
 
 [widget.spacer_1]
 type = "spacer"
@@ -148,12 +152,13 @@ type = "spacer"
 type = "spacer"
 
 [widget.sysmon]
-display = "text"
 enabled = true
-stat = "disk_pct"
+show_value = true
+stat = "disk_used_pct"
+visualization = "none"
 
 [widget.temp]
-display = "text"
+visualization = "none"
 
 [widget.volume]
 show_label = false
