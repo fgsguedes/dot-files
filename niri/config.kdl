@@ -1,4 +1,9 @@
 input {
+    mouse {
+        natural-scroll
+        accel-speed 1
+        accel-profile "flat"
+    }
     trackball {
         natural-scroll
         accel-speed 0.9
