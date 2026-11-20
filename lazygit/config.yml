@@ -28,16 +28,11 @@ gui:
       - '#ed8796'
     defaultFgColor:
       - '#cad3f5'
-
-  authorColors:
-    '*': '#b7bdf8'
-
-
+    authorColors:
+      '*': '#b7bdf8'
 git:
   autoFetch: false
   disableForcePushing: true
-
-
 keybinding:
   universal:
     nextItem-alt: 'n'
@@ -46,15 +41,11 @@ keybinding:
     nextMatch: 'n'
     prevMatch: 'e'
     edit: 'E'
-
   files:
     ignoreFile: 'I'
-
   branches:
     viewGitFlowOptions: 'I'
-
   commits:
     startInteractiveRebase: 'I'
-
   submodules:
     init: 'I'
