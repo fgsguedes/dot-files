@@ -13,9 +13,6 @@ input {
     touchpad {
         natural-scroll
     }
-
-    // Wont focus a window if it will result in the scrolling more than the set amount
-    focus-follows-mouse max-scroll-amount="90%"
 }
 
 output "DP-1" {
@@ -119,13 +116,14 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
-    default-floating-position x=10 y=10 relative-to="bottom-right"
-    open-focused false
+    match app-id="org.gnome.Nautilus"
+    match app-id="Proton Pass"
+    match app-id="steam" title="Friends List"
+
+    default-column-width { proportion 0.5; }
 }
 
 window-rule {
-    match app-id="org.gnome.Nautilus"
     match app-id="org.pulseaudio.pavucontrol"
     match app-id="app.zen_browser.zen" title="Picture-in-Picture"
 
@@ -150,7 +148,18 @@ window-rule {
 }
 
 window-rule {
+    match app-id="app.zen_browser.zen"
+    match app-id="discord"
+    match app-id="steam_app_default" title="Battle.net"
+    match app-id="steam_app_default" title="Battle.net - Chats and Groups"
+
+
+    block-out-from "screencast"
+}
+
+window-rule {
     match app-id="dev.noctalia.Noctalia.Settings"
+    match app-id="proton-pass"
 
     default-column-width { proportion 0.5; }
 }
@@ -161,10 +170,7 @@ layer-rule {
 }
 
 recent-windows {
-    open-delay-ms 0
-    highlight {
-        corner-radius 8
-    }
+    off
 }
 
 include "binds.kdl"
