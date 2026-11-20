@@ -25,37 +25,18 @@ binds {
     Mod+A { focus-column-left; }
     Mod+I { focus-column-right; }
     Mod+S { focus-column-right; }
-    Mod+E { focus-window-up; }
-    Mod+N { focus-window-down; }
-
-    // Focus workspace
-    Super+U { focus-workspace-up; }
-    Super+L { focus-workspace-down; }
 
     // Focus monitor
-    Mod+Ctrl+E { focus-monitor-up; }
-    Mod+Ctrl+N { focus-monitor-down; }
+    Mod+E { focus-monitor-up; }
+    Mod+N { focus-monitor-down; }
 
     // Move
     Mod+Shift+H { move-column-left; }
     Mod+Shift+I { move-column-right; }
-    Mod+Shift+E { move-window-up; }
-    Mod+Shift+N { move-window-down; }
-
-    // Move workspace
-    Super+Shift+U { move-column-to-workspace-up; }
-    Super+Shift+L { move-column-to-workspace-down; }
 
     // Move monitor
-    Mod+Ctrl+Shift+E { move-column-to-monitor-up; }
-    Mod+Ctrl+Shift+N { move-column-to-monitor-down; }
-
-    // Workspaces
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
-    Mod+5 { focus-workspace 5; }
+    Mod+Shift+E { move-column-to-monitor-up; }
+    Mod+Shift+N { move-column-to-monitor-down; }
 
     // Floating
     Mod+Shift+T { toggle-window-floating; }
